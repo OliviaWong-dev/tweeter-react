@@ -5,13 +5,23 @@ function TweetForm() {
   return (
     <h1>
       <section className="newtweet">
-        <form method="post" action="/tweets" className="newtweet__form">
+        <form
+          onClick={(event) => event.preventDefault()}
+          method="post"
+          action="/tweets"
+          className="newtweet__form"
+        >
           <textarea
             className="form__textarea"
             name="text"
             placeholder={inputText}
           ></textarea>
-          <input type="submit" value="Tweet" className="form__input"></input>
+          <input
+            onClick={(event) => event.preventDefault()}
+            type="submit"
+            value="Tweet"
+            className="form__input"
+          ></input>
           <span className="form__counter">140</span>
         </form>
       </section>
